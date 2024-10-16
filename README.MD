@@ -1,6 +1,6 @@
 # Password Generator
 
-![Password Generator](path/to/your/image.png) <!-- Optional: Add an image here -->
+![Password Generator](./gui.png) <!-- Optional: Add an image here -->
 
 A simple yet powerful password generator application built with Python. This tool allows users to create secure passwords with customizable options, using Tkinter for the graphical user interface and `pyperclip` for clipboard functionality.
 
@@ -96,7 +96,7 @@ Press 'e' to Exit or any other key to continue:
 
 Below is an example of what the application interface looks like:
 
-![Password Generator Interface](path/to/your/image.png) <!-- Optional: Replace with an actual screenshot of your app -->
+![Password Generator Interface](./cli.png) <!-- Optional: Replace with an actual screenshot of your app -->
 
 ## License
 
@@ -115,7 +115,7 @@ Contributions are welcome! If you'd like to contribute to the project, please fo
 ## Contact
 
 For any inquiries, please reach out via:
-- Email: your.email@example.com
-- GitHub: [yourusername](https://github.com/yourusername)
+- Email: haldershubhendu2@gmail.com
+- GitHub: [WRWICKJ](https://github.com/WRWICKJ)
 
 ---
