@@ -43,56 +43,62 @@ def copy_to_clipboard():
     else:
         messagebox.showwarning("Warning", "No password to copy!")
 
-# Create main window
-root = tk.Tk()
-root.title("Password Generator")
-root.geometry("400x300")
-root.resizable(False, False)
+def run_gui():
+    global length_entry, password_entry, letters_var, numbers_var, symbols_var  # Declare global variables
 
-# Set dark theme colors
-bg_color = "#0e0e0e"  # Dark background
-fg_color = "#ffffff"  # Light foreground
+    # Create main window
+    root = tk.Tk()
+    root.title("Password Generator")
+    root.geometry("400x300")
+    root.resizable(False, False)
 
-# Apply dark theme to widgets
-root.configure(bg=bg_color)
+    # Set dark theme colors
+    bg_color = "#0e0e0e"  # Dark background
+    fg_color = "#ffffff"  # Light foreground
 
-# Title Label
-title_label = tk.Label(root, text="Password Generator", font=("Helvetica", 16), bg=bg_color, fg=fg_color)
-title_label.pack(pady=10)
+    # Apply dark theme to widgets
+    root.configure(bg=bg_color)
 
-# Length Label and Entry
-length_label = tk.Label(root, text="Enter password length:", bg=bg_color, fg=fg_color)
-length_label.pack(pady=5)
+    # Title Label
+    title_label = tk.Label(root, text="Password Generator", font=("Helvetica", 16), bg=bg_color, fg=fg_color)
+    title_label.pack(pady=10)
 
-length_entry = tk.Entry(root, bg="#1a1a1a", fg=fg_color, insertbackground=fg_color)  # Dark Entry
-length_entry.insert(0, "10")  # Default length
-length_entry.pack(pady=5)
+    # Length Label and Entry
+    length_label = tk.Label(root, text="Enter password length:", bg=bg_color, fg=fg_color)
+    length_label.pack(pady=5)
 
-# Options
-letters_var = tk.BooleanVar(value=True)
-numbers_var = tk.BooleanVar(value=True)
-symbols_var = tk.BooleanVar(value=True)
+    length_entry = tk.Entry(root, bg="#1a1a1a", fg=fg_color, insertbackground=fg_color)  # Dark Entry
+    length_entry.insert(0, "10")  # Default length
+    length_entry.pack(pady=5)
 
-letters_check = tk.Checkbutton(root, text="Include letters", variable=letters_var, bg=bg_color, fg=fg_color, selectcolor=bg_color)
-letters_check.pack(anchor='w', padx=20)
+    # Options
+    letters_var = tk.BooleanVar(value=True)
+    numbers_var = tk.BooleanVar(value=True)
+    symbols_var = tk.BooleanVar(value=True)
 
-numbers_check = tk.Checkbutton(root, text="Include numbers", variable=numbers_var, bg=bg_color, fg=fg_color, selectcolor=bg_color)
-numbers_check.pack(anchor='w', padx=20)
+    letters_check = tk.Checkbutton(root, text="Include letters", variable=letters_var, bg=bg_color, fg=fg_color, selectcolor=bg_color)
+    letters_check.pack(anchor='w', padx=20)
 
-symbols_check = tk.Checkbutton(root, text="Include symbols", variable=symbols_var, bg=bg_color, fg=fg_color, selectcolor=bg_color)
-symbols_check.pack(anchor='w', padx=20)
+    numbers_check = tk.Checkbutton(root, text="Include numbers", variable=numbers_var, bg=bg_color, fg=fg_color, selectcolor=bg_color)
+    numbers_check.pack(anchor='w', padx=20)
 
-# Generate Button
-generate_button = tk.Button(root, text="Generate Password", command=generate_password, bg="#1a1a1a", fg=fg_color)
-generate_button.pack(pady=5)
+    symbols_check = tk.Checkbutton(root, text="Include symbols", variable=symbols_var, bg=bg_color, fg=fg_color, selectcolor=bg_color)
+    symbols_check.pack(anchor='w', padx=20)
 
-# Password Entry
-password_entry = tk.Entry(root, width=40, bg="#1a1a1a", fg=fg_color, insertbackground=fg_color)  # Dark Entry
-password_entry.pack(pady=5)
+    # Generate Button
+    generate_button = tk.Button(root, text="Generate Password", command=generate_password, bg="#1a1a1a", fg=fg_color)
+    generate_button.pack(pady=5)
 
-# Copy Button
-copy_button = tk.Button(root, text="Copy to Clipboard", command=copy_to_clipboard, bg="#1a1a1a", fg=fg_color)
-copy_button.pack(pady=5)
+    # Password Entry
+    password_entry = tk.Entry(root, width=40, bg="#1a1a1a", fg=fg_color, insertbackground=fg_color)  # Dark Entry
+    password_entry.pack(pady=5)
 
-# Run the application
-root.mainloop()
+    # Copy Button
+    copy_button = tk.Button(root, text="Copy to Clipboard", command=copy_to_clipboard, bg="#1a1a1a", fg=fg_color)
+    copy_button.pack(pady=5)
+
+    # Run the application
+    root.mainloop()
+
+if __name__ == "__main__":
+    run_gui()

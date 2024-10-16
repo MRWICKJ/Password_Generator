@@ -36,7 +36,7 @@ def get_user_input():
     
     return length, use_letters, use_numbers, use_symbols
 
-if __name__ == "__main__":
+def generate_password_cli():
     while True:
         length, use_letters, use_numbers, use_symbols = get_user_input()
         try:
@@ -53,3 +53,5 @@ if __name__ == "__main__":
                 break
         except ValueError as e:
             print("Error:", e)
+if __name__ == "__main__":
+    generate_password_cli()

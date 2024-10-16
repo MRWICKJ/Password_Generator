@@ -61,12 +61,14 @@ To run the application with the graphical user interface, execute the following 
 python -m app.gui
 ```
 
+
+
 ### Running the CLI
 
 To use the command-line interface, run the following command in your terminal:
 
 ```bash
-python -m app.password_generator
+python -m app.cli
 ```
 
 You will be prompted to enter the following options:
