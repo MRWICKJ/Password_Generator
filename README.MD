@@ -13,6 +13,7 @@ A simple yet powerful password generator application built with Python. This too
   - Special symbols
 - **Clipboard Support**: Easily copy the generated password to the clipboard with a single click.
 - **User-Friendly Interface**: Simple and intuitive GUI using Tkinter.
+- **Command-Line Interface**: Generate passwords directly from the terminal.
 
 ## Requirements
 
@@ -52,18 +53,42 @@ Follow these steps to set up the project locally:
 
 ## Usage
 
-To run the application, execute the following command:
+### Running the GUI
+
+To run the application with the graphical user interface, execute the following command:
 
 ```bash
 python -m app.gui
 ```
 
-### How to Use
+### Running the CLI
 
-1. **Enter Password Length**: Input the desired length for your password. The default length is set to 10.
-2. **Select Character Types**: Choose whether to include letters, numbers, and symbols by checking the corresponding checkboxes.
-3. **Generate Password**: Click the "Generate Password" button to create a new password based on your selections.
-4. **Copy to Clipboard**: Click the "Copy to Clipboard" button to easily copy the generated password for use.
+To use the command-line interface, run the following command in your terminal:
+
+```bash
+python -m app.password_generator
+```
+
+You will be prompted to enter the following options:
+
+1. **Password Length**: Enter the desired length for your password (default is 10).
+2. **Include Letters**: Type `y` to include letters or `n` to exclude them.
+3. **Include Numbers**: Type `y` to include numbers or `n` to exclude them.
+4. **Include Symbols**: Type `y` to include symbols or `n` to exclude them.
+5. **Copy to Clipboard**: After generating the password, you can choose to copy it to your clipboard by pressing Enter when prompted.
+
+### Example CLI Interaction
+
+```
+Enter password length (default = 10): 12
+Include letters? (y/n): y
+Include numbers? (y/n): y
+Include symbols? (y/n): y
+Generated Password: Abc123!@#
+Press Enter to Copy the Password (or any key to skip):
+Password Copied Successfully!!
+Press 'e' to Exit or any other key to continue:
+```
 
 ## Example
 
@@ -88,7 +113,7 @@ Contributions are welcome! If you'd like to contribute to the project, please fo
 ## Contact
 
 For any inquiries, please reach out via:
-- Email: haldershubhendu2@gmail.com
-- GitHub: [MRWICKJ](https://github.com/MRWICKJ)
+- Email: your.email@example.com
+- GitHub: [yourusername](https://github.com/yourusername)
 
 ---
